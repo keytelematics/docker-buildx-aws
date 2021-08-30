@@ -1,6 +1,6 @@
 FROM docker:19.03.12
 
-LABEL Name=docker-buildx-aws Version=1.0.0
+LABEL Name=docker-buildx-aws Version=1.0.1
 
 RUN mkdir -p $HOME/.docker/cli-plugins/
 RUN echo -e '{\n  \"experimental\": \"enabled\"\n}' > $HOME/.docker/config.json

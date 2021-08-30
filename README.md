@@ -12,6 +12,4 @@ docker build -t keytelematics/docker-buildx-aws .
 
 - AWS CLI
 - Buildx
-- Python2
-- OpenSsl
 - Git
