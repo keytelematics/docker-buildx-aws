@@ -1,5 +1,5 @@
 # https://docs.docker.com/engine/release-notes/24.0/#2406
-FROM docker:24.0.6
+FROM arm64v8/docker:latest
 
 LABEL Name=docker-buildx-aws Version=2.0.0
 
