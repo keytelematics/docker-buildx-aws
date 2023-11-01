@@ -1,4 +1,5 @@
-# https://docs.docker.com/engine/release-notes/24.0/#2406
+# https://github.com/docker-library/official-images#architectures-other-than-amd64
+# https://hub.docker.com/r/arm64v8/docker/tags
 FROM arm64v8/docker:latest
 
 LABEL Name=docker-buildx-aws Version=2.0.0
