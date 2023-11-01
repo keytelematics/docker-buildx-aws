@@ -12,7 +12,10 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
-      
+        
+      - name: Available platforms
+        run: echo ${{ steps.qemu.outputs.platforms }}
+        
       - name: Log in to Docker Hub
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with:
@@ -29,6 +32,7 @@ jobs:
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: .
+          platforms: linux/arm64
           push: true
           tags: isanderthul/docker-buildx-aws:latest
           labels: ${{ steps.meta.outputs.labels }}
