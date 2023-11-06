@@ -43,5 +43,5 @@ jobs:
           context: .
           platforms: linux/arm64,linux/amd64
           push: true
-          tags: gavinvangent/docker-buildx-aws:latest
+          tags: keytelematics/docker-buildx-aws:latest
           labels: ${{ steps.meta.outputs.labels }}
