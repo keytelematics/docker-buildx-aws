@@ -39,6 +39,6 @@ jobs:
         with:
           context: .
           platforms: linux/arm64,linux/amd64
-          push: ${{ github.ref == 'refs/heads/master' }}
+          push: ${{ github.ref == 'refs/heads/main' }}
           tags: keytelematics/docker-buildx-aws:latest
           labels: ${{ steps.meta.outputs.labels }}
