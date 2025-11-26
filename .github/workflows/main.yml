@@ -1,9 +1,6 @@
 name: Publish Docker Image
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
   push_to_registry:
@@ -42,6 +39,6 @@ jobs:
         with:
           context: .
           platforms: linux/arm64,linux/amd64
-          push: true
+          push: ${{ github.ref == 'refs/heads/master' }}
           tags: keytelematics/docker-buildx-aws:latest
           labels: ${{ steps.meta.outputs.labels }}
